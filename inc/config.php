@@ -4,7 +4,7 @@
  require_once('Banner.php');
  require_once('Page.php');
  require_once('Database.php');
- require_once('Listings.php');
+ require_once('Listings_apartments.php');
 
 
  $page_title = "Tvorba web stránok";

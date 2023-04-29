@@ -50,68 +50,13 @@ include('partials/banner.php');
                       <div>
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
-                            <div class="item">
-                              <div class="row">
-                                <div class="col-lg-12">
-                                  <div class="listing-item">
-                                    <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
-                                      <div class="hover-content">
-                                        <div class="main-white-button">
-                                          <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                      <a href="#"><h4>Sunshine Paradise Apartment</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-lg-12">
-                                  <div class="listing-item">
-                                    <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                                      <div class="hover-content">
-                                        <div class="main-white-button">
-                                          <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                      <a href="#"><h4>Best one in this category</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $800 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-lg-12">
-                                  <div class="listing-item">
-                                    <div class="left-image">
-                                      <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                      <div class="hover-content">
-                                        <div class="main-white-button">
-                                          <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Dj Party House</h4></a>
-                                      <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="item">
+          
+                                <?php
+                                include('partials/listings.php')
+
+                                  ?>
+                          
+                            <!--<div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
                                   <div class="listing-item">
@@ -173,7 +118,7 @@ include('partials/banner.php');
                               </div>
                             </div>
                             
-                            <!-- third page of first category -->
+                           third page of first category
                             <div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
@@ -234,11 +179,11 @@ include('partials/banner.php');
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>  -->
                           </div>
                         </div>
                       </div>
-                    </li>
+                    </li>  
                     
                     <!-- second category listing of items -->
                     <li>
