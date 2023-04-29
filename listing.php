@@ -52,7 +52,7 @@ include('partials/banner.php');
                           <div class="owl-carousel owl-listing">
           
                                 <?php
-                                include('partials/listings.php')
+                                include('partials/listings_apartments.php')
 
                                   ?>
                           
@@ -190,7 +190,13 @@ include('partials/banner.php');
                       <div>
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
-                            <div class="item">
+
+                            <?php
+                            include('partials/listings_food.php');
+
+                              ?>
+
+                           <!-- <div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
                                   <div class="listing-item">
@@ -252,7 +258,7 @@ include('partials/banner.php');
                               </div>
                             </div>
                             
-                            <!-- second category second page -->
+                            second category second page
                             <div class="item">
                               <div class="row">
                                 <div class="col-lg-12">
@@ -313,7 +319,7 @@ include('partials/banner.php');
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div>  -->
 
 
                           </div>
