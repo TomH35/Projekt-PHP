@@ -1,56 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Snapdragon 8 gen 2 SoC">
-    <meta name="keywords" content="SoC, system on a chip, systém na čipe">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Snapdragon 8 gen 2</title>
-</head>
-<body class="custom-body-color">
-    
-    <header>
-        <!--navigácia-->
-        <nav class="navbar navbar-expand-sm navbar-dark fixed-top custom-background">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img src="img/cpu-gc253e2714_1280.png" alt="logo" width="28" height="28" class="d-inline-block align-text-top">
-              <span class="custom-navbar-top-color">SoC</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html"> <span class="custom-navbar-color">Domov</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="SoC.html"><span class="custom-navbar-color">SoC</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Kontakt.html"><span class="custom-navbar-color">Kontakt</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="news-sign-in.html" ><span class="custom-navbar-color">Odber noviniek</span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-</header>
+<?php
 
 
-<main class="custom-main-margin-top">
-    <section class="container">
-        <div class="row custom-margin-left-image mb-5">
+$index = $_GET['index'];
+
+$soc_clanok = $SoC_clanok->get_SoC_clanok($index);
+
+
+$html = '';
+
+$html .= '<div class="row custom-margin-left-image mb-5">
             <div class="col-sm-3">
-        <img src="img/processor-4987614_640.jpg" alt="snapdragon SoC" class="custom-img-size">
+            <img src="data:image/jpeg;base64,' . base64_encode($soc_clanok[0]->soc_obrazok) . '" alt="snapdragon SoC" class="custom-img-size">
     </div>
         <div class="col-sm-9">
-        <h2 class="custom-margin-left-title">Qualcomm Snapdragon 8 gen 2</h2>
+        <h2 class="custom-margin-left-title">'. $soc_clanok[0]->soc_nazov .'</h2>
     </div>
     </div>
 
@@ -66,35 +29,32 @@
 
                 <tr>
                     <th scope="row"><strong>Jadra</strong></th>
-                    <td> 1x 3.2 GHz Cortex-X3
-                    <br> 2x 2.8 GHz Cortex-A715
-                    <br> 2x 2.8 GHz Cortex-A710
-                    <br> 3x 2 GHz Cortex-A510 </td> 
+                    <td> '. $soc_clanok[0]->soc_jadra .'</td> 
                    
                 </tr>
                 <tr>
                     <th scope="row"><strong>Počet jadier</strong></th>
-                    <td>8</td>
+                    <td>'. $soc_clanok[0]->soc_pocet_jadier .'</td>
                 
                 </tr>
                 <tr>
                     <th scope="row"><strong>Inštrukčná sada</strong></th>
-                    <td>ARMv9-A</td>
+                    <td>'. $soc_clanok[0]->soc_instrukcna_sada .'</td>
                    
                 </tr>
                 <tr>
                     <th scope="row"><strong>Vyrovnávacia pamäť L2</strong></th>
-                    <td>1MB</td>
+                    <td>'. $soc_clanok[0]->soc_l2 .'</td>
                    
                 </tr>
                 <tr>
                   <th scope="row"><strong>Vyrovnávacia pamäť L3</strong></th>
-                  <td>8MB</td>
+                  <td>'. $soc_clanok[0]->soc_l3 .'</td>
                  
               </tr>
               <tr>
                 <th scope="row"><strong>Výrobný proces</strong></th>
-                <td>4nm</td>
+                <td>'. $soc_clanok[0]->soc_vyrobny_proces .'</td>
                
             </tr>
             </tbody>
@@ -117,32 +77,32 @@
 
             <tr>
                 <th scope="row"><strong>Názov GPU</strong></th>
-                <td> Adreno 740 </td> 
+                <td> '. $soc_clanok[0]->soc_nazov_gpu .'</td> 
                
             </tr>
             <tr>
                 <th scope="row"><strong>Frekvencia GPU</strong></th>
-                <td>900 MHz</td>
+                <td>'. $soc_clanok[0]->soc_frekvencia_gpu .'</td>
             
             </tr>
             <tr>
                 <th scope="row"><strong>Verzia Vulkan</strong></th>
-                <td>1.3</td>
+                <td>'. $soc_clanok[0]->soc_verzia_vulkan .'</td>
                
             </tr>
             <tr>
               <th scope="row"><strong>Verzia OpenGL ES</strong></th>
-              <td>3.2</td>
+              <td>'. $soc_clanok[0]->soc_verzia_open_gl .'</td>
              
           </tr>
             <tr>
               <th scope="row"><strong>Verzia OpenCL</strong></th>
-              <td>2.0</td>
+              <td>'. $soc_clanok[0]->soc_verzia_open_cl.'</td>
              
           </tr>
           <tr>
             <th scope="row"><strong>Verzia DirectX</strong></th>
-            <td>12</td>
+            <td>'. $soc_clanok[0]->soc_verzia_directx .'</td>
            
         </tr>
         </tbody>
@@ -165,42 +125,42 @@
 
           <tr>
               <th scope="row"><strong>Neurálny procesor (NPU)</strong></th>
-              <td>Hexagon</td> 
+              <td>'. $soc_clanok[0]->soc_NPU .'</td> 
              
           </tr>
           <tr>
               <th scope="row"><strong>Typ pamäte</strong></th>
-              <td>UFS 3.1, UFS 4.0</td>
+              <td>'. $soc_clanok[0]->soc_typ_pamate .'</td>
           
           </tr>
           <tr>
               <th scope="row"><strong>Maximálne podporované rozlíšenie obrazovky</strong></th>
-              <td>3840x2160</td>
+              <td>'. $soc_clanok[0]->soc_max_rozlis_obr .'</td>
              
           </tr>
           <tr>
             <th scope="row"><strong>Maximálne podporované rozlíšenie kamery</strong></th>
-            <td>200MP</td>
+            <td>'. $soc_clanok[0]->soc_max_rozlis_kamery .'</td>
            
         </tr>
           <tr>
             <th scope="row"><strong>Nahrávanie videii</strong></th>
-            <td>8k 30FPS, 4k 120FPS</td>
+            <td>'. $soc_clanok[0]->soc_nahravanie_videii .'</td>
            
         </tr>
         <tr>
           <th scope="row"><strong>Prehrávanie videii</strong></th>
-          <td>8k 60FPS, 4k 120FPS</td>
+          <td>'. $soc_clanok[0]->soc_prehravanie_videii.'</td>
          
       </tr>
       <tr>
         <th scope="row"><strong>Video kodeky</strong></th>
-        <td>H.264, H.265, AV1, VP8, VP9</td>
+        <td>'. $soc_clanok[0]->soc_video_kodeky.'</td>
        
     </tr>
     <tr>
       <th scope="row"><strong>Audio kodeky</strong></th>
-      <td>AAC, AIFF, CAF, MP3, MP4, WAV</td>
+      <td>'. $soc_clanok[0]->soc_audio_kodeky .'</td>
      
   </tr>
       </tbody>
@@ -221,22 +181,26 @@
 
         <tr>
             <th scope="row"><strong>Typ pamäte</strong></th>
-            <td>LPDDR5X</td> 
+            <td>'. $soc_clanok[0]->soc_typ_pamate_ram .'</td> 
            
         </tr>
         <tr>
             <th scope="row"><strong>Frekvencia pamäte</strong></th>
-            <td>4200 MHz</td>
+            <td>'. $soc_clanok[0]->soc_frekvencia_pamate .'</td>
         
         </tr>
         <tr>
             <th scope="row"><strong>Zbernica</strong></th>
-            <td>4x 64-bit</td>
+            <td>'. $soc_clanok[0]->soc_zbernica .'</td>
            
         </tr>
         <tr>
+            <th scope="row"><strong>Šírka pásma</strong></th>
+            <td>'. $soc_clanok[0]->soc_sirka_pasma .'</td> 
+        </tr>
+        <tr>
           <th scope="row"><strong>Maximálna velkosť pamäte</strong></th>
-          <td>24 GB</td>
+          <td>'. $soc_clanok[0]->soc_max_velkost_pamate .'</td>
       </tr>
     
     </tbody>
@@ -257,42 +221,42 @@
 
       <tr>
           <th scope="row"><strong>Modem</strong></th>
-          <td>Snapdragon X70</td> 
+          <td>'. $soc_clanok[0]->soc_modem .'</td> 
          
       </tr>
       <tr>
           <th scope="row"><strong>4G podpora</strong></th>
-          <td>LTE Cat. 24</td>
+          <td>'. $soc_clanok[0]->soc_4g_podpora .'</td>
       
       </tr>
       <tr>
           <th scope="row"><strong>5G podpora</strong></th>
-          <td>Áno</td>
+          <td>'. $soc_clanok[0]->soc_5g_podpora .'</td>
          
       </tr>
       <tr>
         <th scope="row"><strong>Maximálna prenosová rýchlosť</strong></th>
-        <td>2500Mbps</td>
+        <td>'. $soc_clanok[0]->soc_max_prenosova_r .'</td>
        
     </tr>
       <tr>
         <th scope="row"><strong>Maximálna rychlosť nahrávania</strong></th>
-        <td>316Mbps</td>
+        <td>'. $soc_clanok[0]->soc_max_nahravanie_r .'</td>
        
     </tr>
     <tr>
       <th scope="row"><strong>Verzia Wi-Fi</strong></th>
-      <td>7</td>
+      <td>'. $soc_clanok[0]->soc_verzia_wifi .'</td>
      
   </tr>
   <tr>
     <th scope="row"><strong>Verzia Bluetooth</strong></th>
-    <td>5.3</td>
+    <td>'. $soc_clanok[0]->soc_verzia_bluetooth .'</td>
    
 </tr>
 <tr>
   <th scope="row"><strong>Navigácia</strong></th>
-  <td>GPS, GLONASS, Beidou, Galileo, QZSS, NAVIC</td>
+  <td>'. $soc_clanok[0]->soc_navigacia .'</td>
  
 </tr>
   </tbody>
@@ -302,7 +266,6 @@
 </div>
 
 </div>
-
 <div class="row mt-3">
   <!--karta-->
 <div class="card w-75 mx-auto">
@@ -429,33 +392,6 @@
 <div class="container text-center mt-3 mb-3">
     <p><a href="https://beebom.com/snapdragon-8-gen-2-benchmarks/" class="custom-link-style-zdroj">Zdroj údajov benchmarku</a></p>
     <a href="SoC.html" class="btn custom-button-color mt-5">Späť</a>
-</div>
-
-    </section>
-
-
-
-</main>
-<!--footer-->
-<footer class="p-3 text-white" style="background-color: #000b29;">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-        <p>COPYRIGHT Tomáš Heldi</p>
-      </div>
-      <div class="col-sm-4">
-          <ul class="custom-list-style">
-          <li><a href="SoC.html" class="custom-link-style">SoC</a></li>
-          <li><a href="Kontakt.html" class="custom-link-style">Kontakt</a></li>
-          <li><a href="news-sign-in.html" class="custom-link-style">Prihlásiť sa na odber noviniek</a></li>
-        </ul>
-      </div>
-      </div>
-    </div>
-</footer>
-
-
-
-<script src="js/bootstrap.bundle.js"></script>
-</body>
-</html>
+</div>';
+echo $html;
+?>

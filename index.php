@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stránka o špecifikácií SoC">
-    <meta name="keywords" content="SoC, system on a chip, systém na čipe">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Systém na čipe</title>
-</head>
-<body class="custom-body-color">
-    <header>
-      <!--navigácia-->
-      <nav class="navbar navbar-expand-sm navbar-dark fixed-top custom-background">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/cpu-gc253e2714_1280.png" alt="logo" width="28" height="28" class="d-inline-block align-text-top">
-            <span class="custom-navbar-top-color">SoC</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"> <span class="custom-navbar-color">Domov</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="SoC.html"><span class="custom-navbar-color">SoC</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Kontakt.html"><span class="custom-navbar-color">Kontakt</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="news-sign-in.html" ><span class="custom-navbar-color">Odber noviniek</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-
-    </header>
+<?php
+include('partials/header.php');
+?>
     <main>
       
       <!--banner s textom-->
@@ -138,31 +97,6 @@
 
     </main>
     <!--footer-->
-    <footer class="p-3 text-white" style="background-color: #000b29;">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-          <p>COPYRIGHT Tomáš Heldi</p>
-        </div>
-        <div class="col-sm-4">
-            <ul class="custom-list-style">
-            <li><a href="SoC.html" class="custom-link-style">SoC</a></li>
-            <li><a href="Kontakt.html" class="custom-link-style">Kontakt</a></li>
-            <li><a href="news-sign-in.html" class="custom-link-style">Prihlásiť sa na odber noviniek</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <ul class="custom-list-style">
-          <li><a href="Snapdragon_8_gen_2.html" class="custom-link-style">Najnovšie SoC</a></li>
-        </ul>
-      </div>
-        </div>
-      </div>
-  </footer>
-
-
-
-
-    <script src="js/bootstrap.bundle.js"></script>
-</body>
-</html>
+<?php
+include('partials/footer.php');
+?>
