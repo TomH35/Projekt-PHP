@@ -27,6 +27,7 @@ include('inc/config.php');
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <?php
+                //$isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
                 print_menu($Header_menu);
             ?>
              <!-- <li class="nav-item">

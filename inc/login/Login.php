@@ -23,6 +23,7 @@ if (isset($_POST['log_user'])) {
         if (hash('sha256', $data['user_password']) === $hashedPassword) {
             $_SESSION['valid'] = true;
             $_SESSION['user_name'] = $data['user_name'];
+            $_SESSION['isLoggedIn'] = true;
             // Redirect to the desired page
             header('Location: ../../index.php');
         } else {

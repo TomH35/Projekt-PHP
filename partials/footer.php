@@ -7,7 +7,7 @@
         <div class="col-sm-6">
             <ul class="custom-list-style">
             <?php
-
+          //$isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
           print_menu($Footer_menu);
         ?>  
             <!--<li><a href="SoC.html" class="custom-link-style">SoC</a></li>
