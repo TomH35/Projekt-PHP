@@ -12,7 +12,7 @@
     $Header_menu = new Menu(array("Domov"=>"index.php",
                                   "SoC"=>"SoC.php",
                                   "Kontakt"=>"Kontakt.php",
-                                  "Odber noviniek"=>"news-sign-up.php",
+                                  "Prihlasiť sa"=>"login.php",
                         ));
     $Footer_menu = new Menu(array("SoC"=>"SoC.php",
                                   "Kontakt"=>"Kontakt.php",
