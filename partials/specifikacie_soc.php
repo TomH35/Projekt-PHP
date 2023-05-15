@@ -287,32 +287,32 @@ $html .= '<div class="row custom-margin-left-image mb-5">
           <tbody>
             <tr>
               <th scope="row"><strong>Zariadenie</strong></th>
-              <td>Referenčné zariadenie</td>
+              <td>'. $soc_clanok[0]->soc_antutu_zariadenie .'</td>
           </tr>
 
           <tr>
               <th scope="row"><strong>CPU</strong></th>
-              <td>270867</td> 
+              <td>'. $soc_clanok[0]->soc_antutu_cpu .'</td> 
              
           </tr>
           <tr>
               <th scope="row"><strong>GPU</strong></th>
-              <td>567801</td>
+              <td>'. $soc_clanok[0]->soc_antutu_gpu .'</td>
           
           </tr>
           <tr>
               <th scope="row"><strong>MEM</strong></th>
-              <td>239879</td>
+              <td>'. $soc_clanok[0]->soc_antutu_mem .'</td>
              
           </tr>
           <tr>
             <th scope="row"><strong>UX</strong></th>
-            <td>198202</td>
+            <td>'. $soc_clanok[0]->soc_antutu_ux .'</td>
            
         </tr>
           <tr>
             <th scope="row"><strong>Výsledné skóre</strong></th>
-            <td>1276749</td>
+            <td>'. $soc_clanok[0]->soc_antutu_vs .'</td>
         </tr>
        
       
@@ -335,16 +335,16 @@ $html .= '<div class="row custom-margin-left-image mb-5">
           <tbody>
             <tr>
               <th scope="row"><strong>Zariadenie</strong></th>
-              <td>Referenčné zariadenie</td> 
+              <td>'. $soc_clanok[0]->soc_mark_zariadenie .'</td> 
           </tr>
           <tr>
             <th scope="row"><strong>Benchmark</strong></th>
-            <td>Wild Life</td> 
+            <td>'. $soc_clanok[0]->soc_mark_benchmark .'</td> 
         </tr>
 
           <tr>
               <th scope="row"><strong>Skóre</strong></th>
-              <td>13575</td> 
+              <td>'. $soc_clanok[0]->soc_mark_skore .'</td> 
           </tr>
              
       </tbody>
@@ -357,7 +357,7 @@ $html .= '<div class="row custom-margin-left-image mb-5">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Geekbench 5
+        Geekbench 6
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
@@ -366,16 +366,16 @@ $html .= '<div class="row custom-margin-left-image mb-5">
           <tbody>
             <tr>
               <th scope="row"><strong>Zariadenie</strong></th>
-              <td>Referenčné zariadenie</td> 
+              <td>'. $soc_clanok[0]->soc_geekbench_zariadenie .'</td> 
           </tr>
           <tr>
             <th scope="row"><strong>Single-Core skóre</strong></th>
-            <td>1490</td> 
+            <td>'. $soc_clanok[0]->soc_geekbench_scs .'</td> 
         </tr>
 
           <tr>
               <th scope="row"><strong>Multi-Core skóre</strong></th>
-              <td>5131</td> 
+              <td>'. $soc_clanok[0]->soc_geekbench_mcs .'</td> 
           </tr>
              
       </tbody>
@@ -390,8 +390,7 @@ $html .= '<div class="row custom-margin-left-image mb-5">
 </div>
 </div>
 <div class="container text-center mt-3 mb-3">
-    <p><a href="https://beebom.com/snapdragon-8-gen-2-benchmarks/" class="custom-link-style-zdroj">Zdroj údajov benchmarku</a></p>
-    <a href="SoC.html" class="btn custom-button-color mt-5">Späť</a>
+    <a href="SoC.php" class="btn custom-button-color mt-5">Späť</a>
 </div>';
 echo $html;
 ?>
