@@ -5,4 +5,5 @@ require_once('Menu.php');
 require_once('Page.php');
 require_once('SoC_clanok.php');
 require_once('Functions.php');
+require_once('Users.php');
 ?>

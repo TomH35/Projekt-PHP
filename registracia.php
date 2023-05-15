@@ -10,11 +10,11 @@ include('partials/header.php');
 
           <div class="card w-50">
         <div class="card-body">
-        <h2 class="text-center card-title"> <strong>registrácia</strong></h2>
-        <p class="card-text"><form class="needs-validation" novalidate>
+        <h2 class="text-center card-title"> <strong>Zaregistrovať sa</strong></h2>
+        <p class="card-text"><form class="needs-validation" action="inc/reg/register.php" method="post" novalidate>
                 <div>
                   <label for="inputname" class="form-label">Použivateľske meno</label>
-                  <input type="text" class="form-control" id="inputname" placeholder="Zadajte používateľske meno" required>
+                  <input type="text" name="user_name" class="form-control" id="inputname" placeholder="Zadajte používateľske meno" required>
                   <div class="valid-feedback">
                   </div>
                   <div class="invalid-feedback">
@@ -23,7 +23,7 @@ include('partials/header.php');
                 </div>
                 <div class="mt-3">
                     <label for="inputemail" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="inputemail" placeholder= "E-mail" required>
+                    <input type="email" name="user_email" class="form-control" id="inputemail" placeholder= "E-mail" required>
                     <div class="valid-feedback">
                     </div>
                     <div class="invalid-feedback">
@@ -33,7 +33,7 @@ include('partials/header.php');
                 
                 <div class="mt-3">
                   <label for="inputpass" class="form-label">Heslo</label>
-                  <input type="password" class="form-control" id="inputpass" placeholder= "Heslo" required>
+                  <input type="password" name="user_password" class="form-control" id="inputpass" placeholder= "Heslo" maxlength="16" required>
                   <div class="valid-feedback">
                 </div>
                   <div class="invalid-feedback">
@@ -56,7 +56,7 @@ include('partials/header.php');
                   </div>
                 </div>
                 <div class="mt-3">
-               <button class="btn custom-button-color" formaction="thank_you_page.html" type="submit">Zaregistrovať sa</button>
+               <button class="btn custom-button-color" type="submit" value="Zaregistrovať" name="add_user">Zaregistrovať sa</button>
                 </div>
               </form></p>
         </div>

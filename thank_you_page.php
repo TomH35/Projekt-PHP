@@ -11,7 +11,7 @@
 <body class="custom-body-color">
   <div class="container mt-5">
   <h1>Ďakujeme za odber noviniek</h1>
-  <a href="index.html" class="btn custom-button-color">Domov</a>
+  <a href="index.php" class="btn custom-button-color">Domov</a>
 </div>
 
   
