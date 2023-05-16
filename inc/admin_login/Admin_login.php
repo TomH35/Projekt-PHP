@@ -5,26 +5,26 @@ session_start();
 $users = $User->get_users();
 $db = new Database();
 $data = [
-    'user_name' => $_POST["user_name"],
-    'user_password' => $_POST["user_password"],
+    'admin_name' => $_POST["admin_name"],
+    'admin_password' => $_POST["admin_password"],
 ];
 
-if (isset($_POST['log_user'])) {
+if (isset($_POST['log_admin'])) {
     // Find the user
-    $query = "SELECT p_heslo FROM pouzivatelia WHERE p_username=:user_name";
+    $query = "SELECT a_heslo FROM admin_t WHERE a_username=:admin_name";
     $stmt = $db->conn->prepare($query);
-    $stmt->bindParam(':user_name', $data['user_name']);
+    $stmt->bindParam(':admin_name', $data['admin_name']);
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($result) {
-        $hashedPassword = $result['p_heslo'];
+        $hashedPassword = $result['a_heslo'];
         // Compare the hashed password with the user-entered password
-        if (hash('sha256', $data['user_password']) === $hashedPassword) {
+        if (hash('sha256', $data['admin_password']) === $hashedPassword) {
             $_SESSION['valid'] = true;
-            $_SESSION['user_name'] = $data['user_name'];
+            $_SESSION['admin_name'] = $data['admin_name'];
             // Redirect to the desired page
-            header('Location: ../../index.php');
+            header('Location: ../../admin_panel.php');
         } else {
             echo 'Nesprávne heslo';
         }
