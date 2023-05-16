@@ -17,7 +17,7 @@ include('partials/header.php');
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Pridať článok</h5>
+        <h5 class="card-title">Pridať alebo upraviť článok</h5>
         <p class="card-text"></p>
         <a href="admin_pridavanie.php" class="btn custom-button-color custom-button-margin">Pridať článok</a>
       </div>
