@@ -13,35 +13,20 @@
                                   "SoC"=>"SoC.php",
                                   "Kontakt"=>"Kontakt.php",
                                   "Prihlasiť sa"=>"login.php",
+                                  "Logout"=>"inc/login/Logout.php",
                         ));
     $Footer_menu = new Menu(array("SoC"=>"SoC.php",
                                   "Kontakt"=>"Kontakt.php",
                                   "Prihlasiť sa"=>"login.php",
                         ));
- /* function print_menu($menu){
+ function print_menu($menu){
      $menu_items = $menu->get_menu();
        foreach($menu_items as $page => $url){
         echo '<li class="nav-item"> 
         <a class="nav-link" aria-current="page" href="'.$url.'"><span class="custom-navbar-color">'.$page.'</span></a>
               </li>';
       }
-   }*/
+   }
 
-   function print_menu($menu){
-    $menu_items = $menu->get_menu();
-    $isLoggedIn = isset($_SESSION['valid']) && $_SESSION['valid'];
-    foreach($menu_items as $page => $url){
-        // Check if the user is logged in
-        if ($isLoggedIn && $page === "Prihlasiť sa") {
-            echo '<li class="nav-item"> 
-                    <a class="nav-link" aria-current="page" href="Logout.php"><span class="custom-navbar-color">Logout</span></a>
-                  </li>';
-        } else {
-            echo '<li class="nav-item"> 
-                    <a class="nav-link" aria-current="page" href="'.$url.'"><span class="custom-navbar-color">'.$page.'</span></a>
-                  </li>';
-        }
-    }
-}
-    
+
 ?>
