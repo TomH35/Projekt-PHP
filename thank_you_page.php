@@ -10,7 +10,7 @@
 </head>
 <body class="custom-body-color">
   <div class="container mt-5">
-  <h1>Ďakujeme za odber noviniek</h1>
+  <h1>Ďakujeme za registráciu</h1>
   <a href="index.php" class="btn custom-button-color">Domov</a>
 </div>
 

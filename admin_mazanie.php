@@ -7,6 +7,7 @@ include('partials/header.php');
     }
 
 ?>
+<main>
 <?php
 $clanok = $Clanok->get_clanok();
 for ($i=0;$i<count($clanok);$i++){
@@ -35,7 +36,7 @@ echo '</div>';
 <div class="container text-center mt-3 mb-3">
 <a href="admin_panel.php" class = "btn custom-button-color">Späť</a>
 </div>
-
+</main>
 <?php
 include('partials/footer.php');
 ?>

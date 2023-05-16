@@ -7,6 +7,7 @@ include('partials/header.php');
     }
 
 ?>
+<main>
 <div class= "container mt-5 mb-5 d-flex justify-content-center">
 <div class= "row mt-5 mb-5">
 <div class= "col-sm-6 mt-5 mb-5">
@@ -48,7 +49,7 @@ include('partials/header.php');
 <div class="container d-flex justify-content-center mt-3 mb-3">
   <a href="inc/admin_login/Admin_logout.php" class = "btn custom-button-color">Logout</a>
 </div>
-
+</main>
 <?php
 include('partials/footer.php');
 ?>
