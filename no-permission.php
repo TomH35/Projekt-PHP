@@ -1,0 +1,1 @@
+nemate povolenie

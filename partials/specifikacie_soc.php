@@ -5,7 +5,6 @@ $index = $_GET['index'];
 
 $soc_clanok = $SoC_clanok->get_SoC_clanok($index);
 
-
 $html = '';
 
 $html .= '<div class="row custom-margin-left-image mb-5">
