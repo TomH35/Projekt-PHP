@@ -6,4 +6,5 @@ require_once('Page.php');
 require_once('SoC_clanok.php');
 require_once('Functions.php');
 require_once('Users.php');
+require_once('Update_clanok.php');
 ?>
