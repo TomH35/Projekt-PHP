@@ -17,7 +17,7 @@ include('partials/header.php');
           <div class="card w-50">
         <div class="card-body">
         <h2 class="text-center card-title"> <strong>Vytvoriť článok</strong></h2>
-        <p class="card-text"><form class="needs-validation" action="inc/soc_clanok/create_soc.php" method="post" novalidate>
+        <p class="card-text"><form class="needs-validation" action="inc/soc_clanok/create_soc.php" method="post" enctype="multipart/form-data" novalidate>
                 <div>
                   <label for="clanok_nadpis" class="form-label">nádpis</label>
                   <input type="text" name="clanok_nadpis" class="form-control" maxlength="45" id="clanok_nadpis" required>
@@ -85,7 +85,7 @@ include('partials/header.php');
 
                 <div class="mt-3">
                   <label for="soc_jadra">Jádra SoC</label>
-                  <textarea id ="soc_jadra" name="soc_jadra" class="form-control">\n<br>\n<br>\n<br></textarea>
+                  <textarea id ="soc_jadra" name="soc_jadra" class="form-control"><br><br><br></textarea>
                   <div class="valid-feedback">
                   </div>
                     <div class="invalid-feedback">
@@ -284,7 +284,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Typ pamäte RAM SoC</label>
+                  <label for="soc_typ_pamate_ram" class="form-label">Typ pamäte RAM SoC</label>
                   <input type="text" name="soc_typ_pamate_ram" class="form-control" maxlength="45" id="soc_typ_pamate_ram">
                   <div class="valid-feedback">
                   </div>
@@ -294,7 +294,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Frekvencia pamäte RAM SoC</label>
+                  <label for="soc_frekvencia_pamate_ram" class="form-label">Frekvencia pamäte RAM SoC</label>
                   <input type="text" name="soc_frekvencia_pamate_ram" class="form-control" maxlength="45" id="soc_frekvencia_pamate_ram">
                   <div class="valid-feedback">
                   </div>
@@ -304,7 +304,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Zbernica SoC</label>
+                  <label for="soc_zbernica" class="form-label">Zbernica SoC</label>
                   <input type="text" name="soc_zbernica" class="form-control" maxlength="45" id="soc_zbernica">
                   <div class="valid-feedback">
                   </div>
@@ -314,7 +314,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Max velkosť pamäte RAM SoC</label>
+                  <label for="soc_max_vel_pamate" class="form-label">Max velkosť pamäte RAM SoC</label>
                   <input type="text" name="soc_max_vel_pamate" class="form-control" maxlength="45" id="soc_max_vel_pamate">
                   <div class="valid-feedback">
                   </div>
@@ -324,7 +324,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Modem SoC</label>
+                  <label for="soc_modem" class="form-label">Modem SoC</label>
                   <input type="text" name="soc_modem" class="form-control" maxlength="45" id="soc_modem">
                   <div class="valid-feedback">
                   </div>
@@ -334,7 +334,7 @@ include('partials/header.php');
                 </div>
                 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">4G podpora SoC</label>
+                  <label for="soc_4g_podpora" class="form-label">4G podpora SoC</label>
                   <input type="text" name="soc_4g_podpora" class="form-control" maxlength="45" id="soc_4g_podpora">
                   <div class="valid-feedback">
                   </div>
@@ -344,7 +344,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">5G podpora SoC</label>
+                  <label for="soc_5G_podpora" class="form-label">5G podpora SoC</label>
                   <input type="text" name="soc_5G_podpora" class="form-control" maxlength="45" id="soc_5G_podpora">
                   <div class="valid-feedback">
                   </div>
@@ -354,7 +354,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Max prenosová rychlosť SoC</label>
+                  <label for="soc_max_prenosova_r" class="form-label">Max prenosová rychlosť SoC</label>
                   <input type="text" name="soc_max_prenosova_r" class="form-control" maxlength="45" id="soc_max_prenosova_r">
                   <div class="valid-feedback">
                   </div>
@@ -364,7 +364,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Max nahravacia rychlosť SoC</label>
+                  <label for="soc_max_nahravacia_r" class="form-label">Max nahravacia rychlosť SoC</label>
                   <input type="text" name="soc_max_nahravacia_r" class="form-control" maxlength="45" id="soc_max_nahravacia_r">
                   <div class="valid-feedback">
                   </div>
@@ -374,7 +374,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Verzia wi-fi SoC</label>
+                  <label for="soc_verzia_wifi" class="form-label">Verzia wi-fi SoC</label>
                   <input type="text" name="soc_verzia_wifi" class="form-control" maxlength="45" id="soc_verzia-wifi">
                   <div class="valid-feedback">
                   </div>
@@ -384,7 +384,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Verzia bluetooth SoC</label>
+                  <label for="soc_verzia_bluetooth" class="form-label">Verzia bluetooth SoC</label>
                   <input type="text" name="soc_verzia_bluetooth" class="form-control" maxlength="45" id="soc_verzia_bluetooth">
                   <div class="valid-feedback">
                   </div>
@@ -395,7 +395,7 @@ include('partials/header.php');
 
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Navigácia SoC</label>
+                  <label for="soc_navigacia" class="form-label">Navigácia SoC</label>
                   <input type="text" name="soc_navigacia" class="form-control" maxlength="45" id="soc_navigacia">
                   <div class="valid-feedback">
                   </div>
@@ -405,7 +405,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Šírka pásma SoC</label>
+                  <label for="soc_sirka_pasma" class="form-label">Šírka pásma SoC</label>
                   <input type="text" name="soc_sirka_pasma" class="form-control" maxlength="45" id="soc_sirka_pasma">
                   <div class="valid-feedback">
                   </div>
@@ -415,7 +415,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu zariadenie</label>
+                  <label for="soc_antutu_zariadenie" class="form-label">Antutu zariadenie</label>
                   <input type="text" name="soc_antutu_zariadenie" class="form-control" maxlength="45" id="soc_antutu_zariadenie">
                   <div class="valid-feedback">
                   </div>
@@ -425,7 +425,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu CPU</label>
+                  <label for="soc_antutu_cpu" class="form-label">Antutu CPU</label>
                   <input type="text" name="soc_antutu_cpu" class="form-control" maxlength="45" id="soc_antutu_cpu">
                   <div class="valid-feedback">
                   </div>
@@ -436,7 +436,7 @@ include('partials/header.php');
 
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu GPU</label>
+                  <label for="soc_antutu_gpu" class="form-label">Antutu GPU</label>
                   <input type="text" name="soc_antutu_gpu" class="form-control" maxlength="45" id="soc_antutu_gpu">
                   <div class="valid-feedback">
                   </div>
@@ -446,7 +446,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu MEM</label>
+                  <label for="soc_antutu_mem" class="form-label">Antutu MEM</label>
                   <input type="text" name="soc_antutu_mem" class="form-control" maxlength="45" id="soc_antutu_mem">
                   <div class="valid-feedback">
                   </div>
@@ -456,7 +456,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu UX</label>
+                  <label for="soc_antutu_ux" class="form-label">Antutu UX</label>
                   <input type="text" name="soc_antutu_ux" class="form-control" maxlength="45" id="soc_antutu_ux">
                   <div class="valid-feedback">
                   </div>
@@ -466,7 +466,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Antutu výsledné skóre</label>
+                  <label for="soc_antutu_vs" class="form-label">Antutu výsledné skóre</label>
                   <input type="text" name="soc_antutu_vs" class="form-control" maxlength="45" id="soc_antutu_vs">
                   <div class="valid-feedback">
                   </div>
@@ -476,7 +476,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">3D Mark zariadenie</label>
+                  <label for="soc_mark_zariadenie" class="form-label">3D Mark zariadenie</label>
                   <input type="text" name="soc_mark_zariadenie" class="form-control" maxlength="45" id="soc_mark_zariadenie">
                   <div class="valid-feedback">
                   </div>
@@ -486,7 +486,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">3D Mark Benchmark</label>
+                  <label for="soc_mark_benchmark" class="form-label">3D Mark Benchmark</label>
                   <input type="text" name="soc_mark_benchmark" class="form-control" maxlength="45" id="soc_mark_benchmark">
                   <div class="valid-feedback">
                   </div>
@@ -496,7 +496,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">3D Mark skóre</label>
+                  <label for="soc_mark_skore" class="form-label">3D Mark skóre</label>
                   <input type="text" name="soc_mark_skore" class="form-control" maxlength="45" id="soc_mark_skore">
                   <div class="valid-feedback">
                   </div>
@@ -506,7 +506,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Geekbench zariadenie</label>
+                  <label for="soc_geekbench_zariadenie" class="form-label">Geekbench zariadenie</label>
                   <input type="text" name="soc_geekbench_zariadenie" class="form-control" maxlength="45" id="soc_geekbench_zariadenie">
                   <div class="valid-feedback">
                   </div>
@@ -516,7 +516,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Geekbench Single-core skóre</label>
+                  <label for="soc_geekbench_scs" class="form-label">Geekbench Single-core skóre</label>
                   <input type="text" name="soc_geekbench_scs" class="form-control" maxlength="45" id="soc_geekbench_scs">
                   <div class="valid-feedback">
                   </div>
@@ -526,7 +526,7 @@ include('partials/header.php');
                 </div>
 
                 <div class="mt-3">
-                  <label for="inputname" class="form-label">Geekbench Multi-core skóre</label>
+                  <label for="soc_geekbench_mcs" class="form-label">Geekbench Multi-core skóre</label>
                   <input type="text" name="soc_geekbench_mcs" class="form-control" maxlength="45" id="soc_geekbench_mcs">
                   <div class="valid-feedback">
                   </div>
@@ -536,23 +536,6 @@ include('partials/header.php');
                 </div>
 
                 
-
-                
-
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
                 <div class="mt-3 d-flex justify-content-center">
                <button class="btn custom-button-color" value="Vytvoriť" name="add_soc" type="submit">Vytvoriť</button>
                 </div>
