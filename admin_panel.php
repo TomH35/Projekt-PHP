@@ -21,6 +21,7 @@ include('partials/header.php');
         <h5 class="card-title">Pridať alebo upraviť článok</h5>
         <p class="card-text"></p>
         <a href="admin_pridavanie.php" class="btn custom-button-color custom-button-margin">Pridať článok</a>
+        <a href="admin_update.php" class="btn custom-button-color custom-button-margin">Upraviť článok</a>
       </div>
     </div>
   </div>

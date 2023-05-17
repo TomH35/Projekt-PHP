@@ -11,8 +11,8 @@ include('partials/header.php');
 <?php
 $clanok = $Clanok->get_clanok();
 for ($i=0;$i<count($clanok);$i++){
-echo '<div class="row d-flex justify-content-center mt-5 mb-5">';
-echo '  <div class="card mb-3" style="max-width: 540px;">';
+echo '<div class="row d-flex justify-content-center mt-5">';
+echo '  <div class="card mt-5" style="max-width: 540px;">';
 echo '    <img src="data:image/jpeg;base64,' . base64_encode($clanok[$i]->clanok_obrazok) . '" class="card-img-top" alt="Snapdragon SoC">';
 echo '    <div class="card-body">';
 echo '      <h5 class="card-title">' . $clanok[$i]->nadpis . '</h5>';

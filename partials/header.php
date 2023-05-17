@@ -27,21 +27,10 @@ include('inc/config.php');
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <?php
-                //$isLoggedIn = isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'];
+                
                 print_menu($Header_menu);
             ?>
-             <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"> <span class="custom-navbar-color">Domov</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="SoC.html"><span class="custom-navbar-color">SoC</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Kontakt.html"><span class="custom-navbar-color">Kontakt</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="news-sign-in.html" ><span class="custom-navbar-color">Odber noviniek</span></a>
-              </li>-->
+            
             </ul>
           </div>
         </div>

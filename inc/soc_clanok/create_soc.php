@@ -10,7 +10,7 @@ if(isset($_POST['add_soc'])) {
     } else {
         $clanok_image = null;
     }
-    // Add the remaining form fields
+    
     $soc_id_clanku = $_POST['soc_id_clanku'];
     if (isset($_FILES['soc_image']['tmp_name']) && !empty($_FILES['soc_image']['tmp_name'])) {
         $soc_image = file_get_contents($_FILES['soc_image']['tmp_name']);
@@ -65,22 +65,17 @@ if(isset($_POST['add_soc'])) {
     $soc_geekbench_mcs = $_POST['soc_geekbench_mcs'];
 
     try {
-        // Save the article details
+        // Uloženie detailov o článku
         $query = "INSERT INTO clanok_soc (id_soc, nadpis, text, clanok_obrazok) VALUES (:soc_id_clanku, :clanok_nadpis, :clanok_text, :clanok_image)";
         $stmt = $db->conn->prepare($query);
         $stmt->bindParam(':soc_id_clanku', $soc_id_clanku);
         $stmt->bindParam(':clanok_nadpis', $clanok_nadpis);
         $stmt->bindParam(':clanok_text', $clanok_text);
         $stmt->bindParam(':clanok_image', $clanok_image);
-        /*if ($clanok_image && !empty($clanok_image)) {
-            $clanokImageData = file_get_contents($clanok_image);
-            $stmt->bindParam(':clanok_image', $clanokImageData, PDO::PARAM_LOB);
-        } else {
-            $stmt->bindValue(':clanok_image', null, PDO::PARAM_NULL);
-        }*/
+        
         $stmt->execute();
 
-        // Save the system on a chip (SoC) details
+        // Uloženie údajov o SoC
         $query = "INSERT INTO soc (
     id_soc, id_soc_clanok, soc_obrazok, soc_nazov, soc_jadra, soc_pocet_jadier, soc_instrukcna_sada, soc_l2, soc_l3, soc_vyrobny_proces,
     soc_nazov_gpu, soc_frekvencia_gpu, soc_verzia_vulkan, soc_verzia_open_gl, soc_verzia_open_cl, soc_verzia_directx,
@@ -152,9 +147,9 @@ $stmt->bindParam(':soc_geekbench_scs', $soc_geekbench_scs);
 $stmt->bindParam(':soc_geekbench_mcs', $soc_geekbench_mcs);
 $stmt->execute();
 
-    echo "Data has been successfully saved.";
+    echo "Článok bol vytvorený";
 } catch (PDOException $e) {
-    // Handle database errors
+    // Handlovanie databázových errorov
     echo "Error: " . $e->getMessage();
 }
 }

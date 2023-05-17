@@ -8,13 +8,13 @@ include('partials/header.php');
 
 ?>
 <main class="mt-5 mb-5">
-        <section class="container">
+        <section class="container mt-5">
 
           <!--formular-->
 
-          <div class = "d-flex justify-content-center">
+          <div class = "d-flex justify-content-center mt-5">
 
-          <div class="card w-50">
+          <div class="card w-50 mt-5">
         <div class="card-body">
         <h2 class="text-center card-title"> <strong>Upraviť článok</strong></h2>
         <p class="card-text"><form class="needs-validation" action="inc/soc_clanok/update_soc.php" method="post" enctype="multipart/form-data" novalidate>
@@ -537,7 +537,7 @@ include('partials/header.php');
 
                 
                 <div class="mt-3 d-flex justify-content-center">
-               <button class="btn custom-button-color" value="Update" name="update_soc" type="submit">Vytvoriť</button>
+               <button class="btn custom-button-color" value="Update" name="update_soc" type="submit">Upraviť</button>
                 </div>
               </form></p>
         </div>

@@ -1,10 +1,10 @@
 <?php
 require('../config.php');
 session_start();
-session_unset(); // Unset all session variables
-session_destroy(); // Destroy the session
+session_unset(); // zruší nastavenie všetkých premenných v sessione
+session_destroy(); // Zničí všetky dáta z tohto sessionu
 
-// Redirect to the desired page
+// Presmerovanie na požadovanú stránku
 header('Location: ../../index.php');
-exit(); // Ensure no further code is executed after the redirect
+exit(); // Zabezpečí aby sa nevykonával žiaden ďaľsí kód po presmerovaní
 ?>

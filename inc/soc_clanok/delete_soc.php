@@ -9,7 +9,7 @@ if(isset($_POST['delete_soc'])){
         $sql2 = 'DELETE FROM soc WHERE id_soc_clanok =' . $id;
         $db->conn->exec($sql2);
         header('Location: ../../admin_mazanie.php');
-        exit(); // Ensure no further code is executed after the redirect
+        exit(); // Zabezpečí aby sa nevykonával žiaden ďalší kód
     }catch(PDOException $e){
         print_r($e->getMessage());
     }
