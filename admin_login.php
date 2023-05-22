@@ -39,9 +39,6 @@ include('partials/header.php');
         </div>
         </div>
         </div>
-        <!--<div class="mt-3 d-flex justify-content-center">
-               <p>Nemáte účet? <a href="registracia.php" class = "btn custom-button-color">Zaregistrovať sa</a></p>
-                </div>-->
         <div class="container text-center mt-3 mb-3">
         <a href="index.php" class = "btn custom-button-color">Späť</a>
         </div>

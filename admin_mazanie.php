@@ -19,7 +19,7 @@ echo '      <h5 class="card-title">' . $clanok[$i]->nadpis . '</h5>';
 echo '      <p class="card-text">' . $clanok[$i]->text . '</p>';
 echo '      <div class="d-flex justify-content-between">';
 echo '        <div>';
-echo '          <a href="Snapdragon_8_gen_2.php?index=' . $i . '" class="btn custom-button-color custom-button-margin">Čítat ďalej</a>';
+echo '          <a href="Snapdragon_8_gen_2.php?index=' . $clanok[$i]->id_soc . '" class="btn custom-button-color custom-button-margin">Čítat ďalej</a>';
 echo '        </div>';
 echo '        <div>';
 echo '          <form action="inc/soc_clanok/delete_soc.php" method="post">';

@@ -7,7 +7,7 @@ for ($i=0;$i<count($clanok);$i++){
     echo       '<div class="card-body">';
     echo          '<h5 class="card-title">'.$clanok[$i]->nadpis.'</h5>';
     echo         '<p class="card-text">'.$clanok[$i]->text.'</p>';
-    echo           '<a href="Snapdragon_8_gen_2.php?index=' . $i . '" class="btn custom-button-color custom-button-margin">Čítat ďalej</a>';
+    echo           '<a href="Snapdragon_8_gen_2.php?index=' .$clanok[$i]->id_soc. '" class="btn custom-button-color custom-button-margin">Čítat ďalej</a>';
     echo          '</div>';
     echo          '</div>';
     echo        '</div>';
