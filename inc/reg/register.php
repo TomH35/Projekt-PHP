@@ -11,10 +11,10 @@ if (isset($_POST['add_user'])) {
         echo 'Všetky polia musia byť vyplnené';
     } else {
         $query = "SELECT * FROM pouzivatelia WHERE p_email = :user_email";
-        $stmt = $db->conn->prepare($query);
-        $stmt->execute([':user_email' => $user_email]);
+        $query_run = $db->conn->prepare($query);
+        $query_run->execute([':user_email' => $user_email]);
 
-        $existingUser = $stmt->fetch(PDO::FETCH_OBJ);
+        $existingUser = $query_run->fetch(PDO::FETCH_OBJ);
 
         if ($existingUser) {
             echo 'User so zadaným emailom už existuje';
@@ -22,8 +22,8 @@ if (isset($_POST['add_user'])) {
             $hashPass = hash('sha256', $user_password);
 
             $query = "INSERT INTO pouzivatelia (p_username, p_email, p_heslo) VALUES (:user_name, :user_email, :user_password)";
-            $stmt = $db->conn->prepare($query);
-            $stmt->execute([
+            $query_run = $db->conn->prepare($query);
+            $query_run->execute([
                 ':user_name' => $user_name,
                 ':user_email' => $user_email,
                 ':user_password' => $hashPass

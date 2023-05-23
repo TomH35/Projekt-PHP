@@ -12,10 +12,10 @@ $data = [
 if (isset($_POST['log_admin'])) {
     
     $query = "SELECT a_heslo FROM admin_t WHERE a_username=:admin_name";
-    $stmt = $db->conn->prepare($query);
-    $stmt->bindParam(':admin_name', $data['admin_name']);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $query_run = $db->conn->prepare($query);
+    $query_run->bindParam(':admin_name', $data['admin_name']);
+    $query_run->execute();
+    $result = $query_run->fetch(PDO::FETCH_ASSOC);
 
     if ($result) {
         $hashedPassword = $result['a_heslo'];

@@ -1,6 +1,7 @@
 <?php
 
-
+//Umožňuje získať hodnoty pomocou názvu query parametra ako kľúča v $_GET.
+//Používa sa na získanie údajov z URL a vykonanie akcií na základe týchto údajov.
 $index = $_GET['index'];
 
 $soc_clanok = $SoC_clanok->get_SoC_clanok($index);
@@ -9,7 +10,7 @@ $html = '';
 
 $html .= '<div class="row custom-margin-left-image mb-5">
             <div class="col-sm-3">
-            <img src="data:image/jpeg;base64,' . base64_encode($soc_clanok[0]->soc_obrazok) . '" alt="snapdragon SoC" class="custom-img-size">
+            <img src="data:image/jpeg;base64,' . base64_encode($soc_clanok[0]->soc_obrazok) . '" alt="SoC image" class="custom-img-size">
     </div>
         <div class="col-sm-9">
         <h2 class="custom-margin-left-title">'. $soc_clanok[0]->soc_nazov .'</h2>

@@ -6,6 +6,8 @@ $soc_update_clanok = $SoC_update_clanok->get_update_soc_clanok();
 
 $db =  new Database();
 if(isset($_POST['update_soc'])){
+    //$_POST obsahuje údaje zaslané pomocou HTTP POST metódy.
+    //Používa na získanie údajov z formulárov odoslaných používateľmi
     $soc_id_clanku = $_POST['soc_id_clanku'];
 
     $clanok_update = [
@@ -69,13 +71,13 @@ if(isset($_POST['update_soc'])){
         'soc_geekbench_mcs' => $_POST['soc_geekbench_mcs']
     ];
 
-    $propertyMapping = array(
+    $clanokMapping = array(
         'clanok_nadpis' => 'nadpis',
         'clanok_text' => 'text',
         'clanok_image' => 'clanok_obrazok',
     );
 
-    $propertyMapping2 = array(
+    $socMapping = array(
         'soc_image' => 'soc_obrazok',
         'soc_nazov' => 'soc_nazov',
         'soc_jadra' => 'soc_jadra',
@@ -126,9 +128,12 @@ if(isset($_POST['update_soc'])){
     );
 
     foreach ($clanok as $cc) {
+        // Skontroluje, že či sa ID `$cc` objektu zhoduje s `$soc_id_clanku`
         if ($cc->id_soc == $soc_id_clanku) {
-            foreach ($propertyMapping as $variable => $property) {
+            foreach ($clanokMapping as $variable => $property) {
+                // skontroluje, že či je `$clanok_update[$variable]` prázdna
                 if (empty($clanok_update[$variable])) {
+                    // pokiaľ je prázdna, tak priradí hodnotu `$cc->$property` `$clanok_update[$variable]`
                     $clanok_update[$variable] = $cc->$property;
                 }
             }
@@ -137,7 +142,7 @@ if(isset($_POST['update_soc'])){
 
     foreach ($soc_update_clanok as $sc) {
         if ($sc->id_soc == $soc_id_clanku) {
-            foreach ($propertyMapping2 as $variable => $property) {
+            foreach ($socMapping as $variable => $property) {
                 if (empty($soc_update[$variable])) {
                     $soc_update[$variable] = $sc->$property;
                 }
@@ -148,8 +153,8 @@ if(isset($_POST['update_soc'])){
 
     try{
         $query =  "UPDATE clanok_soc SET nadpis=:clanok_nadpis, text=:clanok_text, clanok_obrazok=:clanok_image  WHERE id_soc=:soc_id_clanku";
-        $stmt = $db->conn->prepare($query);
-        $stmt->execute($clanok_update);
+        $query_run = $db->conn->prepare($query);
+        $query_run->execute($clanok_update);
 
 
         $query = "UPDATE soc 
@@ -173,9 +178,9 @@ if(isset($_POST['update_soc'])){
               soc_geekbench_mcs = :soc_geekbench_mcs WHERE id_soc = :soc_id_clanku";
 
 
-        $stmt = $db->conn->prepare($query);
+        $query_run = $db->conn->prepare($query);
         
-        $stmt->execute($soc_update);
+        $query_run->execute($soc_update);
 
 
 
